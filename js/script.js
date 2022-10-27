@@ -67,19 +67,33 @@ downButton.addEventListener('click',
 
 upButton.addEventListener('click',
 
+    // function () {
+
+    //     if (activeIndex === 0) {
+    //         listEleImg[activeIndex].classList.remove('active');
+    //         activeIndex= 4;
+    //         listEleImg[activeIndex].classList.add('active');
+    //     }
+
+    //     else {
+    //         listEleImg[activeIndex].classList.remove('active');
+    //         activeIndex--;
+    //         listEleImg[activeIndex].classList.add('active');
+    //     }
+
+    // }
+
     function () {
 
+        listEleImg[activeIndex].classList.remove('active');
+
         if (activeIndex === 0) {
-            listEleImg[activeIndex].classList.remove('active');
-            activeIndex= 4;
-            listEleImg[activeIndex].classList.add('active');
+            activeIndex = listEleImg.length;
         }
 
-        else {
-            listEleImg[activeIndex].classList.remove('active');
-            activeIndex--;
-            listEleImg[activeIndex].classList.add('active');
-        }
+        activeIndex--;
+
+        listEleImg[activeIndex].classList.add('active');
 
     }
 
